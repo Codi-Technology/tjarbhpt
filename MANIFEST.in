@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include tjarbhpt *.css
+recursive-include tjarbhpt *.csv
+recursive-include tjarbhpt *.html
+recursive-include tjarbhpt *.ico
+recursive-include tjarbhpt *.js
+recursive-include tjarbhpt *.json
+recursive-include tjarbhpt *.md
+recursive-include tjarbhpt *.png
+recursive-include tjarbhpt *.py
+recursive-include tjarbhpt *.svg
+recursive-include tjarbhpt *.txt
+recursive-exclude tjarbhpt *.pyc

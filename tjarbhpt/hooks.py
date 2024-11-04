@@ -29,7 +29,10 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+# doctype_js = {
+#     "Sales Invoice" : "public/js/invoice.js",
+#     "Purchase Invoice" : "public/js/invoice.js",
+# }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -98,9 +101,10 @@ app_license = "MIT"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
+permission_query_conditions = {
+    "Sales Invoice": "tjarbhpt.permissions.get_permission_query_conditions",
+    "Purchase Invoice" : "tjarbhpt.permissions.get_permission_query_conditions",
+}
 #
 # has_permission = {
 #	"Event": "frappe.desk.doctype.event.event.has_permission",
@@ -221,3 +225,18 @@ scheduler_events = {
 # auth_hooks = [
 #	"tjarbhpt.auth.validate"
 # ]
+
+fixtures = [
+    {
+		'doctype': 'Property Setter',
+		"filters": [
+			[
+				"name", "in", (
+                    "Sales Invoice-amended_from-depends_on" ,
+                    "Purchase Invoice-amended_from-depends_on",
+				)
+			]
+				
+		]
+	}
+]

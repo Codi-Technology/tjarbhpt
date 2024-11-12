@@ -104,6 +104,11 @@ app_license = "MIT"
 permission_query_conditions = {
     "Sales Invoice": "tjarbhpt.permissions.get_permission_query_conditions",
     "Purchase Invoice" : "tjarbhpt.permissions.get_permission_query_conditions",
+    
+    "Journal Entry" : "tjarbhpt.permissions.get_permission_query_conditions",
+    "Delivery Note" : "tjarbhpt.permissions.get_permission_query_conditions",
+    "Purchase Receipt" : "tjarbhpt.permissions.get_permission_query_conditions",
+    
 }
 #
 # has_permission = {

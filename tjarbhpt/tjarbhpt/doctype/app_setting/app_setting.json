@@ -9,7 +9,7 @@
  ],
  "fields": [
   {
-   "description": "All Cancel Invoice Hide Before This Date",
+  "description": "Before this date Any Status of the following doctypes (Sales Invoice, Purchase Invoice, Journal Entry, Delivery Note, Purchase Receipt) documents are hidden.\n\nPlease ensure that the date is set correctly to avoid unintended data visibility issues.",
    "fieldname": "cancel_invoice_hide_before_date",
    "fieldtype": "Date",
    "in_list_view": 1,
